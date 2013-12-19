@@ -1,0 +1,34 @@
+{
+	"1": {
+		"name":"John",
+		"type":"regular",
+		"subordinates":{}
+	},
+	"2": {
+		"name":"Johnny",
+		"type":"boss",
+		"subordinates":{
+			"3":{
+				"name":"Dean",
+				"type":"regular",
+				"subordinates":{}
+			},
+			"4":{
+				"name":"Danny",
+				"type":"boss",
+				"subordinates":{
+					"5": {
+						"name":"John5",
+						"type":"regular",
+						"subordinates":{}
+					},
+					"6": {
+						"name":"John6",
+						"type":"regular",
+						"subordinates":{}
+					}
+				}
+			}
+		}
+	}
+}
