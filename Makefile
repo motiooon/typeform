@@ -9,4 +9,10 @@ test-w:
 		--reporter $(REPORTER) \
 		--watch
 
+test-cov: lib-cov
+		@MYPROJ_COVERAGE=1 $(MAKE) test REPORTER=html-cov > coverage.html
+
+lib-cov:
+		@jscoverage lib lib-cov
+
 .PHONY: test

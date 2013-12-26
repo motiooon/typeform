@@ -82,4 +82,26 @@ describe("Organisation", function(){
 			assert.equal(true,true);
 		});
 	});
+
+	describe("retireMember", function(){
+		it("should be able to retire a member");
+	});
+
+	describe("activateMember", function(){
+		it("should be able to reactivate a member");
+	});
+
+	describe("promoteToBoss", function(){
+		it("should be able to promote a member to boss");
+	});
+
+	describe("findMembersWithSameRank", function(){
+		it("should be able to find a memebr with the same rank");
+	});
+
+	describe("findEligibileReplacement", function(){
+		it("should be able to find boss replacement");
+	});
+
+
 });
