@@ -1,0 +1,22 @@
+{
+  "name": "typeform",
+  "version": "0.0.0",
+  "description": "fby system",
+  "main": "create_world.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/motiooon/typeform.git"
+  },
+  "author": "Gabriel Baciu",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/motiooon/typeform/issues"
+  },
+  "homepage": "https://github.com/motiooon/typeform",
+  "devDependencies": {
+    "mocha": "~1.16.2"
+  }
+}

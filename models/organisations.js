@@ -14,21 +14,7 @@ Organisation.prototype.addMember = function(member) {
 	this.members[member.id] = member;
 	var parent = this.getMember(member.reports_to);
 	parent.subordinates[member.id] = member;
-
 };
-
-//Organisation.prototype.getMembers = function(ids){
-//	var return_val = [];
-//
-//	if(Array.isArray(ids)){
-//		ids.forEach(function(id){
-//			return_val.push(this.members[id]);
-//		});
-//	}else{
-//		return_val = this.members[ids];
-//	}
-//	return return_val;
-//};
 
 Organisation.prototype.retireMember = function(id, status){
 	this.retired[id] = this.members[id];
@@ -46,59 +32,10 @@ Organisation.prototype.activateMember = function(id){
 	parent.subordinates[id] = this.members[id];
 };
 
-
-
 Organisation.prototype.promoteToBoss = function(member, subordinates){
 	member.type = "boss";
 	member.subordinates = subordinates;
 };
-
-
-//Organisation.prototype.findReplacementBoss = function(oldBoss){
-//
-//	if(Object.keys(oldBoss.subordinates).length === 0){
-//		return null;
-//	} else{
-//		var members_ids = Object.keys(this.members);
-//		members_ids.forEach(function(member_id){
-//			 // find max age and then return boss with max age on the same level with the oldBoss
-//		});
-//	}
-//};
-//
-//Organisation.prototype.replaceBoss = function(oldBoss, newBoss){
-//	newBoss.addSubordinates(oldBoss.subordinates);
-//};
-//
-//Organisation.prototype.updateHierarchy = function(){
-//	var _hierarchy = {};
-//
-//	var createHierarchyRecursive = function(mems){
-//		for(var id in mems){
-//			if(!mems[id].reports_to){
-//				_hierarchy[id] =  mems[id]; //top level guy
-//			}else{
-//				if(_hierarchy[mems[id].reports_to.id]){
-//					_hierarchy[mems[id].reports_to.id].subordinates[id] = mems[id];
-//				}else{
-//					_hierarchy[mems[id].reports_to.id]={subordinates:{}};
-//					_hierarchy[mems[id].reports_to.id].subordinates[id] = mems[id];
-//				}
-//			}
-//
-//			if(Object.keys(mems[id].subordinates).length > 0){
-//
-//			}
-//
-//
-//		}
-//	};
-//
-//	createHierarchyRecursive(this.members);
-//
-//	this.hierarchy = _hierarchy;
-//};
-
 
 Organisation.prototype.getMember = function(id){
 
