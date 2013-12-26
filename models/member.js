@@ -5,18 +5,17 @@ function Member(options) {
 	// like the existence of an organisation and a name, etc
 	this.id = helpers.generateId();
 	this.name = options.name || "John Doe";
-	this.age = options.age;
 	this.years_in_organisation = options.years_in_organisation;
 	this.type = options.type || ""; // boss, regular
 	this.subordinates = {};
 	this.lost_subordinates = {};
 	this.state = "active"; // enum "active, jword, mword,"
 	this.organisation = options.organisation;
-	this.reports_to = options.boss || null;
+	this.reports_to = options.reports_to || null;
 }
 
-Member.prototype.getName = function() {
-	return this.name;
+Member.prototype.get = function(prop) {
+	return this[prop];
 };
 
 Member.prototype.addSubordinates = function(subordinates) {

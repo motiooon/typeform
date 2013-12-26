@@ -1,6 +1,6 @@
 Code Test Mafia
 ----
-<br/>
+
 
 The FBI has captured some Mafia internal records dating from 1985 until the present. They
 
@@ -11,7 +11,7 @@ towards catching the most important members. We need to track closely who report
 the organization because if a boss has more than 50 people under him he should be put under
 
 special surveillance.
-<br/><br/>
+<br/>
 
 During these years there have been restructurings, murders and imprisonment. Based on
 
@@ -56,16 +56,10 @@ Bonus: Write a method that given two mafia members identifies which one ranks hi
 
 organization.
 
-<br/>
+To install dependencies and run tests
+----
 
-If possible we would like to you to do the test in PHP. If you are not familiar with PHP please use 
-
-another mainstream language, such as Java, Python ...
-
-<br/>
-
-Please don’t use any framework or third party libraries as all the code must be written by you.
-
-Also note that no UI development is required.
-
-    
+```sh
+npm install
+make test
+```
